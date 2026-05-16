@@ -1,0 +1,4 @@
+<resources>
+    <!-- The user-visible name of the application -->
+    <string name="app_name">EduLog</string>
+</resources>

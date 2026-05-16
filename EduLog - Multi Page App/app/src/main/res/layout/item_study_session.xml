@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Study Session List Item Layout
+    Represents a single entry in the study history list.
+    Displays the subject title, the date of the session, and the time duration.
+-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Name of the subject studied -->
+        <TextView
+            android:id="@+id/tvSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"/>
+
+        <!-- Calendar date of the session -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oct 27, 2023"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- Time range (Start Time - End Time) -->
+        <TextView
+            android:id="@+id/tvTimeRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="10:00 AM - 11:30 AM"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

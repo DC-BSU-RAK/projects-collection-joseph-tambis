@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main Dashboard Menu
+    Contains actions for viewing instructions and editing the user profile.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Help/Instructions action -->
+    <item
+        android:id="@+id/action_instructions"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="How to use"
+        app:showAsAction="ifRoom" />
+
+    <!-- Profile editing action -->
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+</menu>

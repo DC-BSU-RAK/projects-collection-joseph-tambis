@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Note List Item Layout
+    Represents a single note card in the staggered grid of the Notes screen.
+    Displays the title, snippet of content, category badge, and action buttons.
+-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Button to toggle the 'Pinned' status of the note -->
+        <ImageButton
+            android:id="@+id/btnPinNote"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/btn_star_big_off"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Note Title - Bold and prominent -->
+        <TextView
+            android:id="@+id/tvNoteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Note Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnPinNote"
+            app:layout_constraintEnd_toStartOf="@id/btnDeleteNote"/>
+
+        <!-- Quick Delete Action Button -->
+        <ImageButton
+            android:id="@+id/btnDeleteNote"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/accent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Category Badge (e.g., Idea, To-Do) -->
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_category_chip"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="General"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteTitle"
+            app:layout_constraintStart_toStartOf="@id/tvNoteTitle" />
+
+        <!-- Preview snippet of the note content (limited to 6 lines) -->
+        <TextView
+            android:id="@+id/tvNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Note content goes here..."
+            android:maxLines="6"
+            android:ellipsize="end"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory" />
+
+        <!-- Formatted date when the note was last modified -->
+        <TextView
+            android:id="@+id/tvNoteDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Oct 27, 2023"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteContent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        Base application theme using Material 3 Light components.
+        We use 'NoActionBar' because we implement custom Toolbars in our activities.
+    -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorTertiary">@color/accent</item>
+
+        <!-- Setting the default window background and surface colors -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+    </style>
+
+    <!-- Main theme applied to the application in the Manifest -->
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+</resources>

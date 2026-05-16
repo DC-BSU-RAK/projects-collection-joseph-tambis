@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Palette -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App Brand Colors -->
+    <color name="primary">#2C3E50</color>
+    <color name="primary_variant">#1A252F</color>
+    <color name="secondary">#18BC9C</color>
+    <color name="accent">#E74C3C</color>
+
+    <!-- UI State Colors -->
+    <color name="background">#F8F9FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#B00020</color>
+
+    <!-- Note Pastel Colors (used for randomized note card backgrounds) -->
+    <color name="note_yellow">#FFF9C4</color>
+    <color name="note_blue">#E1F5FE</color>
+    <color name="note_green">#E8F5E9</color>
+    <color name="note_pink">#FCE4EC</color>
+    <color name="note_purple">#F3E5F5</color>
+    <color name="note_orange">#FFF3E0</color>
+</resources>
